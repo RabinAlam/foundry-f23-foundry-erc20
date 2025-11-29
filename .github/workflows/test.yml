@@ -24,7 +24,11 @@ jobs:
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
         with:
+<<<<<<< HEAD
           version: 1.4.4  # Add this line to match your local version
+=======
+          version: 1.4.4  # Match your local version
+>>>>>>> 45b78d2 (ci: Pin Foundry version to 1.4.4 for consistent formatting)
 
       - name: Show Forge version
         run: forge --version
