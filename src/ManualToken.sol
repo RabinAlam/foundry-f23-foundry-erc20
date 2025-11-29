@@ -3,7 +3,7 @@ pragma solidity ^0.8.18;
 
 contract ManualToken {
     mapping(address => uint256) private s_balances;
-    
+
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     constructor() {
@@ -31,12 +31,12 @@ contract ManualToken {
         require(_to != address(0), "Transfer to zero address");
         require(_amount > 0, "Transfer amount must be positive");
         require(s_balances[msg.sender] >= _amount, "Insufficient balance");
-        
+
         if (msg.sender != _to) {
             s_balances[msg.sender] -= _amount;
             s_balances[_to] += _amount;
         }
-        
+
         emit Transfer(msg.sender, _to, _amount);
     }
 }
