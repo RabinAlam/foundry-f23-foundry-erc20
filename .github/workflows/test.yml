@@ -23,6 +23,8 @@ jobs:
 
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: 1.4.4  # Add this line to match your local version
 
       - name: Show Forge version
         run: forge --version
